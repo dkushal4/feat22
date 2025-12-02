@@ -1,0 +1,19 @@
+inputSet:
+  name: feat22branch
+  identifier: feat22branch
+  orgIdentifier: default
+  projectIdentifier: demo
+  pipeline:
+    identifier: feat22
+    stages:
+      - stage:
+          identifier: sfg
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: Wait_1
+                    type: Wait
+                    spec:
+                      duration: 10m
