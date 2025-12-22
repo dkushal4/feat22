@@ -1,0 +1,22 @@
+pipeline:
+  name: test3
+  identifier: test3
+  projectIdentifier: kushal_project_movement
+  orgIdentifier: kushal_project_org
+  tags: {}
+  stages:
+    - stage:
+        name: ds
+        identifier: ds
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: Wait
+                  name: Wait_1
+                  identifier: Wait_1
+                  spec:
+                    duration: 10m
+        tags: {}
