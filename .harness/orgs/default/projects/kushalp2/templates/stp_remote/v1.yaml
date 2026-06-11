@@ -1,0 +1,12 @@
+template:
+  name: stp_remote
+  identifier: stp_remote
+  versionLabel: v1
+  type: Step
+  projectIdentifier: kushalp2
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Wait
+    spec:
+      duration: 10m
