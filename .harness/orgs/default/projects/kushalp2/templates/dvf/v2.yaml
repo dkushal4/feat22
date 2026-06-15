@@ -17,3 +17,12 @@ template:
               identifier: Wait_1
               spec:
                 duration: 10m
+          - step:
+              name: V2
+              identifier: V2
+              template:
+                templateRef: Step_1
+                versionLabel: V1
+                templateInputs:
+                  type: ShellScript
+                  timeout: <+input>
