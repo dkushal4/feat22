@@ -1,0 +1,21 @@
+template:
+  name: Step 1
+  identifier: Step_1
+  versionLabel: V1
+  type: Step
+  projectIdentifier: kushalp2
+  orgIdentifier: default
+  tags: {}
+  spec:
+    timeout: <+input>
+    type: ShellScript
+    spec:
+      shell: Bash
+      executionTarget: {}
+      delegateSelectors: []
+      source:
+        type: Inline
+        spec:
+          script: echo Hello
+      environmentVariables: []
+      outputVariables: []
