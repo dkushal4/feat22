@@ -1,0 +1,17 @@
+template:
+  name: Piple
+  identifier: Piple
+  versionLabel: V1
+  type: Pipeline
+  projectIdentifier: kushalp2
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: S1
+          identifier: S1
+          tags: {}
+          template:
+            templateRef: dvf
+            versionLabel: v2
