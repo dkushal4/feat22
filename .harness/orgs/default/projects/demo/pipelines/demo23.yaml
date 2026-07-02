@@ -1,22 +1,18 @@
 pipeline:
-  name: demo-23
-  identifier: demo23
-  projectIdentifier: demo
-  orgIdentifier: default
-  tags: {}
   stages:
-    - stage:
-        name: fgsd
-        identifier: fgsd
-        description: ""
-        type: Custom
-        spec:
-          execution:
-            steps:
-              - step:
-                  type: Wait
-                  name: Wait_1
-                  identifier: Wait_1
-                  spec:
-                    duration: 10m
-        tags: {}
+    - runtime: shell
+      steps:
+        - run:
+            script: echo "Hello from dynamic stage"
+          id: run_1
+          name: run_1
+      id: stage_2
+      name: stage_2
+    - runtime: shell
+      steps:
+        - run:
+            script: echo "Hello from dynamic stage 2"
+          id: run_2
+          name: run_2
+      id: stage_1
+      name: stage_1
