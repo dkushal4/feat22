@@ -1,18 +1,10 @@
 pipeline:
   stages:
-    - runtime: shell
-      steps:
+    - steps:
         - run:
             script: echo "Hello from dynamic stage"
           id: run_1
           name: run_1
       id: stage_2
       name: stage_2
-    - runtime: shell
-      steps:
-        - run:
-            script: echo "Hello from dynamic stage 2"
-          id: run_2
-          name: run_2
-      id: stage_1
-      name: stage_1
+    
