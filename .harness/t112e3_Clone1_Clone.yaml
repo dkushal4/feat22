@@ -1,0 +1,30 @@
+pipeline:
+  projectIdentifier: kushal_test
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: sd
+        identifier: sd
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: ShellScript
+                  name: ShellScript_1
+                  identifier: ShellScript_1
+                  spec:
+                    shell: Bash
+                    executionTarget: {}
+                    source:
+                      type: Inline
+                      spec:
+                        script: <+execution.steps.ShellScript_1.name>
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: 10m
+        tags: {}
+  identifier: t112e3_Clone1_Clone
+  name: t112e3 - Clone1 - Clone
