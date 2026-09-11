@@ -1,0 +1,10 @@
+pipeline:
+  name: tttte
+  identifier: tttte
+  tags: {}
+  template:
+    templateRef: tempgit
+    versionLabel: v2
+    gitBranch: main-patch
+  projectIdentifier: kushal_test
+  orgIdentifier: default
