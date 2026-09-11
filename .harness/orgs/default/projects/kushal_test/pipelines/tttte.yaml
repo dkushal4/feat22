@@ -4,7 +4,7 @@ pipeline:
   tags: {}
   template:
     templateRef: tempgit
-    versionLabel: v2
+    versionLabel: v1
     gitBranch: main-patch
   projectIdentifier: kushal_test
   orgIdentifier: default
