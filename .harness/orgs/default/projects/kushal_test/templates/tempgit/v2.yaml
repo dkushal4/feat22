@@ -1,0 +1,31 @@
+template:
+  name: temp-git
+  identifier: tempgit
+  type: Pipeline
+  projectIdentifier: kushal_test
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: ss
+          identifier: ss
+          description: ""
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    type: Wait
+                    name: Wait_1
+                    identifier: Wait_1
+                    spec:
+                      duration: 10m
+                - step:
+                    type: Wait
+                    name: Wait_2
+                    identifier: Wait_2
+                    spec:
+                      duration: 10m
+          tags: {}
+  versionLabel: v2
