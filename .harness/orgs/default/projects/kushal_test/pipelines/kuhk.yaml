@@ -1,0 +1,9 @@
+pipeline:
+  name: kuhk
+  identifier: kuhk
+  tags: {}
+  template:
+    templateRef: tempgit
+    versionLabel: v1
+  projectIdentifier: kushal_test
+  orgIdentifier: default
