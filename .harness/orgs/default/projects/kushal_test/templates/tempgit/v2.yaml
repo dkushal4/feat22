@@ -29,3 +29,5 @@ template:
                       duration: 10m
           tags: {}
   versionLabel: v2
+  allowedOverrides:
+    - NotificationRules
