@@ -1,0 +1,12 @@
+template:
+  name: swwe
+  identifier: swwe
+  versionLabel: v1
+  type: Step
+  projectIdentifier: test_kushal
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Wait
+    spec:
+      duration: 10m
