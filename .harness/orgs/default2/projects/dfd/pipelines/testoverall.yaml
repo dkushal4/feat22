@@ -5,18 +5,97 @@ pipeline:
   projectIdentifier: dfd
   orgIdentifier: default2
   stages:
-    - stage:
-        name: s1
-        identifier: s1
-        description: ""
-        type: Custom
-        spec:
-          execution:
-            steps:
-              - step:
-                  type: Wait
-                  name: Wait_1
-                  identifier: Wait_1
-                  spec:
-                    duration: 10m
-        tags: {}
+    - parallel:
+        - stage:
+            name: sdax
+            identifier: sdax
+            description: ""
+            type: Custom
+            spec:
+              execution:
+                steps:
+                  - step:
+                      type: Wait
+                      name: Wait_1
+                      identifier: Wait_1
+                      spec:
+                        duration: 10m
+                  - step:
+                      type: HarnessApproval
+                      name: HarnessApproval_1
+                      identifier: HarnessApproval_1
+                      spec:
+                        approvalMessage: Please review the following information and approve the pipeline progression
+                        includePipelineExecutionHistory: true
+                        isAutoRejectEnabled: false
+                        approvers:
+                          userGroups:
+                            - account._account_all_users
+                          minimumCount: 1
+                          disallowPipelineExecutor: false
+                        approverInputs: []
+                      timeout: 1d
+                  - step:
+                      type: Barrier
+                      name: Barrier_1
+                      identifier: Barrier_1
+                      spec:
+                        barrierRef: fee
+                      timeout: 10m
+            tags: {}
+        - stage:
+            name: dd
+            identifier: dd
+            description: ""
+            type: Custom
+            spec:
+              execution:
+                steps:
+                  - step:
+                      type: Wait
+                      name: Wait_1
+                      identifier: Wait_1
+                      spec:
+                        duration: 10m
+                  - step:
+                      type: Barrier
+                      name: Barrier_1
+                      identifier: Barrier_1
+                      spec:
+                        barrierRef: fee
+                      timeout: 10m
+            tags: {}
+        - stage:
+            name: ddf
+            identifier: ddf
+            description: ""
+            type: Deployment
+            spec:
+              deploymentType: Kubernetes
+              service:
+                serviceRef: ser
+              environment:
+                environmentRef: env
+                deployToAll: false
+                infrastructureDefinitions:
+                  - identifier: juj
+              execution:
+                steps:
+                  - step:
+                      type: Wait
+                      name: Wait_1
+                      identifier: Wait_1
+                      spec:
+                        duration: 10m
+                rollbackSteps: []
+            tags: {}
+            failureStrategies:
+              - onFailure:
+                  errors:
+                    - AllErrors
+                  action:
+                    type: Ignore
+  flowControl:
+    barriers:
+      - name: fee
+        identifier: fee
