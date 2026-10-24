@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  tc7chart:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-10-24T18:08:54.564785+05:30"
+    description: TC-7 test chart
+    digest: 90495bc7c7c9c74964ddc84c1b6cdf724e53c2c09d7d80b9e4741a34f4e7d8ac
+    name: tc7chart
+    type: application
+    urls:
+    - https://dkushal4.github.io/feat22/tc7chart-1.0.0.tgz
+    version: 1.0.0
+generated: "2026-10-24T18:08:54.564309+05:30"
