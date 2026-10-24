@@ -1,7 +1,7 @@
 pipeline:
   name: test2
   identifier: test2
-  projectIdentifier: projectA
+  projectIdentifier: projectB
   orgIdentifier: pipelinemovementtesting
   tags: {}
   stages:
@@ -23,7 +23,7 @@ pipeline:
                     source:
                       type: Inline
                       spec:
-                        script: echo 2
+                        script: echo 22
                     environmentVariables: []
                     outputVariables: []
                   timeout: 10m
