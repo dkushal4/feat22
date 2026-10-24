@@ -1,7 +1,7 @@
 pipeline:
   name: test2
   identifier: test2
-  projectIdentifier: projectA
+  projectIdentifier: projectB
   orgIdentifier: pipelinemovementtesting
   tags: {}
   stages:
@@ -27,4 +27,10 @@ pipeline:
                     environmentVariables: []
                     outputVariables: []
                   timeout: 10m
+              - step:
+                  type: Wait
+                  name: Wait_1
+                  identifier: Wait_1
+                  spec:
+                    duration: 10m
         tags: {}
