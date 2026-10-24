@@ -2,8 +2,18 @@ apiVersion: v1
 entries:
   tc7chart:
   - apiVersion: v2
+    appVersion: 1.0.1
+    created: "2026-10-24T18:19:08.55381+05:30"
+    description: TC-7 test chart
+    digest: d43ea54939f8223636abd71df904edd003dc31d1f3a74537a256822fed3961cf
+    name: tc7chart
+    type: application
+    urls:
+    - https://dkushal4.github.io/feat22/tc7chart-1.0.1.tgz
+    version: 1.0.1
+  - apiVersion: v2
     appVersion: 1.0.0
-    created: "2026-10-24T18:08:54.564785+05:30"
+    created: "2026-10-24T18:19:08.553332+05:30"
     description: TC-7 test chart
     digest: 90495bc7c7c9c74964ddc84c1b6cdf724e53c2c09d7d80b9e4741a34f4e7d8ac
     name: tc7chart
@@ -11,4 +21,4 @@ entries:
     urls:
     - https://dkushal4.github.io/feat22/tc7chart-1.0.0.tgz
     version: 1.0.0
-generated: "2026-10-24T18:08:54.564309+05:30"
+generated: "2026-10-24T18:19:08.552823+05:30"
