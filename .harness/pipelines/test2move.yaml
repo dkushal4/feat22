@@ -1,6 +1,7 @@
 pipeline:
   name: test2
   identifier: test2
+  projectIdentifier: projectA
   orgIdentifier: pipelinemovementtesting
   tags: {}
   stages:
