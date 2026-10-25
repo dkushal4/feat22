@@ -1,0 +1,19 @@
+inputSet:
+  name: etsg
+  identifier: etsg
+  orgIdentifier: pipelinemovementtesting
+  projectIdentifier: projectB
+  pipeline:
+    identifier: tewseswbhook
+    stages:
+      - stage:
+          identifier: s1
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: Wait_1
+                    type: Wait
+                    spec:
+                      duration: 11s
