@@ -1,0 +1,10 @@
+pipeline:
+  stages:
+    - name: stage_9987
+      id: stage_9987
+      steps:
+        - name: adccd
+          run:
+            shell: bash
+            script: <+input>
+          id: adccd
