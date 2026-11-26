@@ -1,0 +1,10 @@
+pipeline:
+  stages:
+    - name: stage_a698
+      id: stage_a698
+      steps:
+        - name: test1
+          run:
+            shell: bash
+            script: <+input>
+          id: test1
