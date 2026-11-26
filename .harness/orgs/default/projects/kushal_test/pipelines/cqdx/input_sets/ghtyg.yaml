@@ -1,0 +1,19 @@
+inputSet:
+  name: ghtyg
+  identifier: ghtyg
+  orgIdentifier: default
+  projectIdentifier: kushal_test
+  pipeline:
+    identifier: cqdx
+    stages:
+      - stage:
+          identifier: fdcx
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: Wait_1
+                    type: Wait
+                    spec:
+                      duration: 12s
