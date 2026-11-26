@@ -1,0 +1,28 @@
+pipeline:
+  name: test-buildjj
+  identifier: testbuild
+  projectIdentifier: kushal_test
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: s1
+        identifier: s1
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: Wait
+                  name: Wait_1
+                  identifier: Wait_1
+                  spec:
+                    duration: <+input>
+              - step:
+                  name: jj
+                  identifier: jj
+                  template:
+                    templateRef: org.tst_kushal
+                    versionLabel: v1
+        tags: {}
